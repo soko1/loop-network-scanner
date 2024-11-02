@@ -95,9 +95,9 @@ def main():
 
             for ip, mac, vendor in new_entries:
                 if mac == 'N/A':
-                    message += f'IP = {ip}, MAC = {mac}\n'
+                    message += f'{ip}\n{mac}\n\n'
                 else:
-                    message += f'IP = {ip}, MAC = {mac} ({vendor})\n'
+                    message += f'{ip}\n{mac}\n{vendor}\n\n'
 
             log_message = message.strip()
             print(log_message)  # Print message to stdout
