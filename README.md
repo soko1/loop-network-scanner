@@ -5,11 +5,11 @@ This script is designed to monitor devices on a network. It periodically scans s
 ## Installing the required dependencies
 
 ```
+$ git clone https://github.com/soko1/loop-network-scanner && cd loop-network-scanner
+$ mv loop-network-scanner.conf.sample loop-network-scanner.conf
 $ virtualenv env
 $ source ./env/bin/activate
 (env) $ pip install python-nmap requests
-(env) $ git clone https://github.com/soko1/loop-network-scanner && cd loop-network-scanner
-(env) $ mv loop-network-scanner.conf.sample loop-network-scanner.conf
 ```
 
 ## Configuration
