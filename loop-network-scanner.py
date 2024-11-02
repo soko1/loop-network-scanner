@@ -33,7 +33,7 @@ SCAN_INTERVAL_IN_SECONDS = int(config.get('SCAN_INTERVAL_IN_SECONDS', 60))
 # Set up logging 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(message)s')
 
-# Function to send messages to Telegram
+# send messages to Telegram
 def send_telegram_message(message):
     if SEND_TELEGRAM_MESSAGES:
         url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
@@ -44,7 +44,7 @@ def send_telegram_message(message):
         }
         requests.post(url, data=data)
 
-# Function to scan the network using nmap
+# scan the network using nmap
 def scan_network(ip_ranges):
     nm = nmap.PortScanner()
     devices = {}
@@ -59,19 +59,19 @@ def scan_network(ip_ranges):
 
     return devices
 
-# Function to load the device database
+# load the device database
 def load_devices():
     if os.path.exists(DATABASE_FILE):
         with open(DATABASE_FILE, 'rb') as f:
             return pickle.load(f)
     return {}
 
-# Function to save the device database
+# save the device database
 def save_devices(devices):
     with open(DATABASE_FILE, 'wb') as f:
         pickle.dump(devices, f)
 
-# Function to update the device database with new devices
+# update the device database with new devices
 def update_device_database(old_devices, new_devices):
     new_entries = []
     for ip, (mac, vendor) in new_devices.items():
