@@ -1,4 +1,4 @@
-<img src="doc/img/screenshot.jpg" alt="Screenshot" width="200"/>
+<img src="doc/img/screenshot.jpg" alt="Screenshot" width="300"/>
 
 ## Loop Network Scanner
 
