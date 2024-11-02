@@ -3,7 +3,7 @@
 ```
 $ virtualenv env
 $ source ./env/bin/activate
-(env) $ pip pip install python-nmap requests
+(env) $ pip install python-nmap requests
 ```
 
 ## Setting up and installing the script
