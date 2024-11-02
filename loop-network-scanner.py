@@ -91,7 +91,8 @@ def main():
             new_entries.sort(key=lambda x: ipaddress.ip_address(x[0]))
 
             timestamp = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
-            message = f"=== {timestamp} ===\n\nNew devices found:\n\n"
+
+            message = f"New devices found:\n\n"
 
             for ip, mac, vendor in new_entries:
                 if mac == 'N/A':
@@ -99,11 +100,14 @@ def main():
                 else:
                     message += f'{ip}\n{mac}\n{vendor}\n\n'
 
-            log_message = message.strip()
+            message = message.strip()
+
+            log_message = f"\n=== {timestamp} ===\n\n"
+            log_message += message
             print(log_message)  # Print message to stdout
             logging.info(log_message)  # Log the message to the file
 
-            send_telegram_message(log_message)  # Send message to Telegram if enabled
+            send_telegram_message(message)  # Send message to Telegram if enabled
 
             save_devices(devices)  # Save updated database
 
