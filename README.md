@@ -1,4 +1,4 @@
-![Screenshot](doc/img/screenshot.jpg)
+<img src="doc/img/screenshot.jpg" alt="Screenshot" width="600"/>
 
 ## Loop Network Scanner
 
