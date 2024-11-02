@@ -4,6 +4,8 @@ This script is designed to monitor devices on a network. It periodically scans s
 
 ## Installing the required dependencies
 
+Installing [nmap](https://nmap.org/download)
+
 ```
 $ git clone https://github.com/soko1/loop-network-scanner 
 $ cd loop-network-scanner
