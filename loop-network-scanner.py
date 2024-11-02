@@ -30,8 +30,8 @@ LOG_FILE = config['LOG_FILE']
 SEND_TELEGRAM_MESSAGES = config.get('SEND_TELEGRAM_MESSAGES', 'False') == 'True'
 SCAN_INTERVAL_IN_SECONDS = int(config.get('SCAN_INTERVAL_IN_SECONDS', 60))  
 
-# Set up logging
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
+# Set up logging 
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(message)s')
 
 # Function to send messages to Telegram
 def send_telegram_message(message):
@@ -80,7 +80,6 @@ def update_device_database(old_devices, new_devices):
             old_devices[ip] = (mac, vendor)
     return new_entries
 
-# Main function
 def main():
     devices = load_devices()  # Load existing database
 
@@ -91,7 +90,9 @@ def main():
         if new_entries:
             new_entries.sort(key=lambda x: ipaddress.ip_address(x[0]))
 
-            message = "New devices found:\n"
+            timestamp = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+            message = f"=== {timestamp} ===\n\nNew devices found:\n\n"
+
             for ip, mac, vendor in new_entries:
                 if mac == 'N/A':
                     message += f'IP = {ip}, MAC = {mac}\n'
@@ -107,6 +108,7 @@ def main():
             save_devices(devices)  # Save updated database
 
         time.sleep(SCAN_INTERVAL_IN_SECONDS)  # Wait for the specified interval
+
 
 if __name__ == "__main__":
     main()
