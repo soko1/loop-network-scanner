@@ -1,4 +1,4 @@
-## Loop Network loop-network-scanner
+## Loop Network Scanner
 
 This script is designed to monitor devices on a network. It periodically scans specified IP ranges and notifies you if any new devices appear. Notifications can be sent to both a log file and Telegram.
 
@@ -28,7 +28,7 @@ The configuration file `loop-network-scanner.conf` contains the following parame
 DATABASE_FILE=loop-network-scanner.db
 LOG_FILE=loop-network-scanner.log
 IP_RANGES=10.10.11.0/24,192.168.31.0/24
-SCAN_INTERVAL_IN_SECONDS=3
+SCAN_INTERVAL_IN_SECONDS=90
 
 ### telegram
 SEND_TELEGRAM_MESSAGES=False
@@ -44,7 +44,7 @@ CHAT_ID=__PASTE_CHAT_ID__
 
 - **IP_RANGES**: The IP address ranges that the script will scan. Specify them as a comma-separated list (e.g., `10.10.11.0/24,192.168.31.0/24`).
 
-- **SCAN_INTERVAL_IN_SECONDS**: The interval in seconds between network scans. Set this value according to your requirements (default is `3`).
+- **SCAN_INTERVAL_IN_SECONDS**: The interval in seconds between network scans. Set this value according to your requirements (default is `90`).
 
 ### Telegram
 

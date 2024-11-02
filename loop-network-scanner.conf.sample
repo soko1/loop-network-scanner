@@ -1,7 +1,7 @@
 DATABASE_FILE=loop-network-scanner.db
 LOG_FILE=loop-network-scanner.log
 IP_RANGES=10.10.11.0/24,192.168.31.0/24
-SCAN_INTERVAL_IN_SECONDS=3
+SCAN_INTERVAL_IN_SECONDS=90
 
 ### telegram
 SEND_TELEGRAM_MESSAGES=False
