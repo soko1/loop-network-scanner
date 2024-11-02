@@ -5,7 +5,8 @@ This script is designed to monitor devices on a network. It periodically scans s
 ## Installing the required dependencies
 
 ```
-$ git clone https://github.com/soko1/loop-network-scanner && cd loop-network-scanner
+$ git clone https://github.com/soko1/loop-network-scanner 
+$ cd loop-network-scanner
 $ mv loop-network-scanner.conf.sample loop-network-scanner.conf
 $ virtualenv env
 $ source ./env/bin/activate
