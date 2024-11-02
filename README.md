@@ -10,7 +10,7 @@ $ cd loop-network-scanner
 $ mv loop-network-scanner.conf.sample loop-network-scanner.conf
 $ virtualenv env
 $ source ./env/bin/activate
-(env) $ pip install python-nmap requests
+(env) $ pip install -r requirements.txt
 ```
 
 ## Configuration
