@@ -31,13 +31,13 @@ CHAT_ID=__PASTE_CHAT_ID__
 
 ### Parameter Descriptions
 
-- **DATABASE_FILE**: The name of the file where information about found devices will be stored (default is `loop-network-scanner.db`).
+- **DATABASE_FILE**: The name of the file where information about found devices will be stored. 
 
-- **LOG_FILE**: The name of the file for logging. The script will log notifications about new devices (default is `loop-network-scanner.log`).
+- **LOG_FILE**: The name of the file for logging. The script will log notifications about new devices. 
 
-- **IP_RANGES**: The IP address ranges that the script will scan. Specify them as a comma-separated list (e.g., `10.10.11.0/24,192.168.31.0/24`).
+- **IP_RANGES**: The IP address ranges that the script will scan. Specify them as a comma-separated list. 
 
-- **SCAN_INTERVAL_IN_SECONDS**: The interval in seconds between network scans. Set this value according to your requirements (default is `90`).
+- **SCAN_INTERVAL_IN_SECONDS**: The interval in seconds between network scans. Set this value according to your requirements. 
 
 ### Telegram
 
