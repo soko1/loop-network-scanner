@@ -1,3 +1,5 @@
+![Screenshot](doc/img/screenshot.jpg)
+
 ## Loop Network Scanner
 
 This script is designed to monitor devices on a network. It periodically scans specified IP ranges and notifies you if any new devices appear. Notifications can be sent to both a log file and Telegram.
