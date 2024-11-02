@@ -8,16 +8,8 @@ This script is designed to monitor devices on a network. It periodically scans s
 $ virtualenv env
 $ source ./env/bin/activate
 (env) $ pip install python-nmap requests
-```
-
-## Setting up and installing the script
-
-```
 (env) $ git clone https://github.com/soko1/loop-network-scanner && cd loop-network-scanner
 (env) $ mv loop-network-scanner.conf.sample loop-network-scanner.conf
-(env) $ vim loop-network-scanner.conf
-...
-(env) $ ./loop-network-scanner.py
 ```
 
 ## Configuration
@@ -53,4 +45,20 @@ CHAT_ID=__PASTE_CHAT_ID__
 - **TELEGRAM_TOKEN**: Your Telegram bot token. Replace `__PASTE_TOKEN__` with your bot's token.
 
 - **CHAT_ID**: The chat ID where the bot will send messages. Replace `__PASTE_CHAT_ID__` with your chat ID.
+
+## Running the script
+
+The script can be run as a regular user:
+
+```
+(env) $ ./loop-network-scanner.py
+```
+
+But it is better to run it under root:
+
+```
+(env) $ sudo ./loop-network-scanner.py
+```
+
+Under root, more accurate information will be collected (for example, MAC addresses of devices will be available)
 
